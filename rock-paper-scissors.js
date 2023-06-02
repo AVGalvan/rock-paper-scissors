@@ -6,7 +6,7 @@ const getComputerChoice = () => {
 }
 
 const playRound = (playerSelection, computerSelection) => {
-  playerSelection = toLowerCase(playerSelection);
+  playerSelection = playerSelection.toLowerCase();
 
   if(playerSelection === computerSelection){
     return 'Tie! You both played the same option'
