@@ -6,17 +6,13 @@ const getComputerChoice = () => {
 }
 
 const getPlayerChoice = () =>{
-  let playerChoice = prompt('Enter "rock", "paper", or "scissors".');
-  console.log(playerChoice)
-  
-  playerChoice = playerChoice.toLowerCase();
-  console.log(playerChoice)
+  let playerChoice = prompt('Enter "rock", "paper", or "scissors".').toLowerCase();
 
-  if(playerChoice !== 'rock' && playerChoice !== 'paper' && playerChoice !== 'scissors'){
-    return 'Please input either "rock", "paper", or "scissors".'
-  } else {
-    return playerChoice;
+  while(playerChoice !== 'rock' && playerChoice !== 'paper' && playerChoice !== 'scissors'){
+    playerChoice = prompt('Please input either "rock", "paper", or "scissors".').toLowerCase()
   }
+
+  return playerChoice;
 }
 
 const playRound = () => {
