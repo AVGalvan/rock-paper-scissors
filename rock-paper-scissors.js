@@ -5,9 +5,24 @@ const getComputerChoice = () => {
   return(choices[randomInt])
 }
 
-const playRound = (playerSelection, computerSelection) => {
-  playerSelection = playerSelection.toLowerCase();
+const getPlayerChoice = () =>{
+  let playerChoice = prompt('Enter "rock", "paper", or "scissors".');
+  console.log(playerChoice)
+  
+  playerChoice = playerChoice.toLowerCase();
+  console.log(playerChoice)
 
+  if(playerChoice !== 'rock' && playerChoice !== 'paper' && playerChoice !== 'scissors'){
+    return 'Please input either "rock", "paper", or "scissors".'
+  } else {
+    return playerChoice;
+  }
+}
+
+const playRound = () => {
+  let playerSelection = getPlayerChoice()
+  let computerSelection = getComputerChoice()
+  
   if(playerSelection === computerSelection){
     return 'Tie! You both played the same option'
   } else if (playerSelection === 'rock'){
