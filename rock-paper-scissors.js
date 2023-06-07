@@ -24,24 +24,31 @@ const playRound = () => {
   let computerSelection = getComputerChoice()
   
   if(playerSelection === computerSelection){
-    return 'Tie! You both played the same option'
+    console.log( 'Tie! You both played the same option.')
+    return 0;
   } else if (playerSelection === 'rock'){
     if (computerSelection === 'scissors'){
-      return 'You win! Computer chose scissors.';
+      console.log( 'You win! Computer chose scissors.')
+      return 1;
     } else {
-      return 'You lose! Computer chose paper.';
+      console.log( 'You lose! Computer chose paper.')
+      return 2;
     }
   } else if (playerSelection === 'paper'){
     if(computerSelection === 'rock'){
-      return 'You win! Computer chose rock.'
+      console.log( 'You win! Computer chose rock.')
+      return 1;
     } else {
-      return 'You lose! Computer chose scissors.'
+      console.log( 'You lose! Computer chose scissors.')
+      return 2;
     }
   } else if (playerSelection === 'scissors'){
     if(computerSelection === 'paper'){
-      return 'You win! Computer chose paper.'
+      console.log( 'You win! Computer chose paper.')
+      return 1;
     } else {
-      return 'You lose! Computer chose rock.'
+      console.log( 'You lose! Computer chose rock.')
+      return 2;
     }
   }
 
