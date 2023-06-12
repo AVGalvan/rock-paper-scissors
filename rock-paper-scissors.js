@@ -5,15 +5,15 @@ const getComputerChoice = () => {
   return(choices[randomInt])
 }
 
-const getPlayerChoice = () =>{
-  let playerChoice = prompt('Enter "rock", "paper", or "scissors".').toLowerCase();
+// const getPlayerChoice = () =>{
+//   let playerChoice = prompt('Enter "rock", "paper", or "scissors".').toLowerCase();
 
-  while(playerChoice !== 'rock' && playerChoice !== 'paper' && playerChoice !== 'scissors'){
-    playerChoice = prompt('Please input either "rock", "paper", or "scissors".').toLowerCase()
-  }
+//   while(playerChoice !== 'rock' && playerChoice !== 'paper' && playerChoice !== 'scissors'){
+//     playerChoice = prompt('Please input either "rock", "paper", or "scissors".').toLowerCase()
+//   }
 
-  return playerChoice;
-}
+//   return playerChoice;
+// }
 
 const playRound = () => {
   let playerSelection = getPlayerChoice()
@@ -51,31 +51,35 @@ const playRound = () => {
 }
 
 
-const game = () =>{
-  let playerScore = 0;
-  let compScore = 0;
+// const game = () =>{
+//   let playerScore = 0;
+//   let compScore = 0;
 
-  for(i=0;i<5; i++){
-    let outcome = playRound()
-    if(outcome === 0){
-      continue;
-    } else if (outcome === 1){
-      playerScore++;
-    } else if (outcome === 2){
-      compScore++;
-    } else {
-      console.log('Something has gone really wrong')
-    }
-  }
+//   // for(i=0;i<5; i++){
+//   //   let outcome = playRound()
+//   //   if(outcome === 0){
+//   //     continue;
+//   //   } else if (outcome === 1){
+//   //     playerScore++;
+//   //   } else if (outcome === 2){
+//   //     compScore++;
+//   //   } else {
+//   //     console.log('Something has gone really wrong')
+//   //   }
+//   // }
 
-  if(playerScore === compScore){
-    console.log(`Game is a tie.\nYou scored: ${playerScore} points \nComputer scored: ${compScore} points`)
-  } else if(playerScore > compScore){
-    console.log(`You won!\nYou scored: ${playerScore} points \nComputer scored: ${compScore}`)
-  } else {
-    console.log(`You lost.\nYou scored: ${playerScore} points \nComputer scored: ${compScore}`)
-  }
+//   // if(playerScore === compScore){
+//   //   console.log(`Game is a tie.\nYou scored: ${playerScore} points \nComputer scored: ${compScore} points`)
+//   // } else if(playerScore > compScore){
+//   //   console.log(`You won!\nYou scored: ${playerScore} points \nComputer scored: ${compScore}`)
+//   // } else {
+//   //   console.log(`You lost.\nYou scored: ${playerScore} points \nComputer scored: ${compScore}`)
+//   // }
 
-}
+// }
 
-game();
+const rockButton = document.querySelector('#rock-button')
+const paperButton = document.querySelector('#paper-button')
+const scissorsButton = document.querySelector('#scissors-button')
+const roundResults = document.querySelector('#round-results')
+const gameResults = document.querySelector('#game-results')
